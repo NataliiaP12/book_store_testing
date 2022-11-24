@@ -26,17 +26,16 @@ delete_html5_webapp_development.click()
 undo = driver.find_element_by_link_text("Undo?")
 undo.click()
 
-quantiti_js_data_structures_and_algorithm = driver.find_element_by_css_selector("tbody .cart_item:nth-child(1) .input-text")
-quantiti_js_data_structures_and_algorithm.clear()
-quantiti_js_data_structures_and_algorithm.send_keys("3")
+quantity_js_data_structures_and_algorithm = driver.find_element_by_css_selector("tbody .cart_item:nth-child(1) .input-text")
+quantity_js_data_structures_and_algorithm.clear()
+quantity_js_data_structures_and_algorithm.send_keys("3")
 
 update_basket = driver.find_element_by_name("update_cart")
 update_basket.click()
 
-# 9: ???
-# quantiti_js_data_structures_and_algorithm = driver.find_element_by_css_selector("tbody .cart_item:nth-child(1) .input-text")
-# quantiti_js_data_structures_and_algorithm_get_text = quantiti_js_data_structures_and_algorithm.text
-# assert quantiti_js_data_structures_and_algorithm_get_text == "3"
+quantity_js_data_structures_and_algorithm = driver.find_element_by_css_selector("tbody .cart_item:nth-child(1) .input-text")
+quantity_js_data_structures_and_algorithm_get_value = quantity_js_data_structures_and_algorithm.get_attribute("value")
+assert quantity_js_data_structures_and_algorithm_get_value == "3"
 
 time.sleep(3)
 apply_coupon = driver.find_element_by_name("apply_coupon")

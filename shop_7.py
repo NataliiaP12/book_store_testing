@@ -43,23 +43,23 @@ email_adress.send_keys("1TEST2TEST3TEST@mail.ru")
 phone = driver.find_element_by_css_selector("#billing_phone_field .input-text")
 phone.send_keys("1234567890")
 
-country = driver.find_element_by_id("billing_country_field")
+country = driver.find_element_by_css_selector("#billing_country_field .select2-container")
 country.click()
 
-#country_select = driver.find_element_by_css_selector("#select2-drop .select2-search .select2-input")
-#country_select.send_keys("United Kingdom (UK)")
+country_select = driver.find_element_by_css_selector("#select2-drop .select2-search .select2-input")
+country_select.send_keys("United Kingdom (UK)")
 
-#country_UK = driver.find_element_by_id("select2-chosen-1")
-#country_UK.click()
+country_UK = driver.find_element_by_css_selector("#select2-results-1 li")
+country_UK.click()
 
-adress = driver.find_element_by_css_selector("#billing_address_1_field .input-text")
-adress.send_keys("Baker-street, 221B")
+address = driver.find_element_by_css_selector("#billing_address_1_field .input-text")
+address.send_keys("Baker-street, 221B")
 
 town = driver.find_element_by_css_selector("#billing_city_field .input-text")
 town.send_keys("London")
 
 postcode = driver.find_element_by_css_selector("#billing_postcode_field .input-text")
-postcode.send_keys("NW1")
+postcode.send_keys("NW1 6XE")
 
 driver.execute_script("window.scrollBy(0, 600);")
 
